@@ -1,0 +1,25 @@
+
+
+.Title {
+    text-align: left;
+    font-size: 2rem;
+    padding-left: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: "open_sans_light";
+}
+
+.App_header {
+    background-color: #EC4B25;
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    color: white;
+}
+
+.App_body {
+    height: 93vh;
+    padding-top: 5em;
+}

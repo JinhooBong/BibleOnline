@@ -1,0 +1,17 @@
+.verse_box {
+    background-color: white;
+    width: 80vw;
+    margin: auto;
+    height: 40vh;
+    border-radius: 5px;
+    border: 2px solid #DDDCDA;
+}
+
+.VOTD_title {
+    text-align: left;
+    padding-left: 1em;
+    font-family: opensans_light_italic;
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
