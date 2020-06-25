@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './VOTD.module.css';
+import Verse from '../Verse/Verse';
 
 const VOTD = () => {
 
+    let [responseObj, setResponseObj] = useState({});
+
     function getVOTD() {
+
+        setResponseObj({});
+
         fetch("https://ajith-holy-bible.p.rapidapi.com/GetVerses?Book=Luke&chapter=1&VerseFrom=5&VerseTo=6", {
             "method": "GET",
             "headers": {
@@ -12,6 +18,9 @@ const VOTD = () => {
 	        }
         })
         .then(response => response.json())
+        .then(response => {
+            setResponseObj(response);
+        })
         .catch(err => {
             console.log(err);
         });
@@ -22,6 +31,7 @@ const VOTD = () => {
         <div className={classes.verse_box}>
             <p className={classes.VOTD_title}>Verse of the Day</p>
             <button onClick={getVOTD}>Click</button>
+            <Verse responseObj={responseObj}/>
         </div>
     )
 }
