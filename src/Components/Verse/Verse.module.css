@@ -1,0 +1,9 @@
+.VOTD_box {
+    font-family: "open_sans_light";
+    font-size: 16px;
+    padding: 0 2em;
+}
+
+.chapter {
+    text-align: right;
+}
